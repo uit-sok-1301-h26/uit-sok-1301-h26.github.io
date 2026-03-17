@@ -49,6 +49,6 @@ RED Kunngjøringer og beskjeder legges ut i [Canvas](https://uit.instructure.com
 
 ## Innlevering og eksamen  
 
-Du må bestå 4 obligatoriske skriftlige oppgaver - alle skrives individuelt. To av disse trekkes tildeldig og danner grunnlag for en muntlig eksamen (30 minutter). Du må også ta en skriftlig skoleeksamen på 3 timer. Samlet karakter (A-F) beregnes med 60% vekt på muntlig del og 40% på den skriftlige delen. 
+Du må bestå 4 obligatoriske skriftlige oppgaver - alle skrives individuelt. To av disse trekkes tilfeldig og danner grunnlag for en muntlig eksamen (30 minutter). Du må også ta en skriftlig skoleeksamen på 3 timer. Samlet karakter (A-F) beregnes med 60% vekt på muntlig del og 40% på den skriftlige delen. 
 
 Frister, oppgaver og ressurser finnes i [kursplanen](kursplan.md){:target="blank"}.   
