@@ -31,7 +31,6 @@ MÅ REDIGERES
 |19. september |  F8 | Institusjoner og organisering av økonomisk aktivitet | DC |[Ressursside](/ressurssider/F8.md){:target='_blank_'} |
 |23. september|**Frist**||  |Leveres i |
 |24. september|C2   | Case 2: BNP og CO2-utslipp  |DC |  [lenke til case](case.md) |
-
 |3. oktober|**Frist**||  ||
 |7. oktober|F9| Teknologi, insentiver og økonomisk vekst | DC | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
 |10. oktober |V2|  Skriveverksted 2: Quarto  |DC |Quartofiler lastes ned (clones) fra [GitHub](https://github.com/uit-sok-1301-h26/Skriveverksted_2.git){:target='_blank_'}|
