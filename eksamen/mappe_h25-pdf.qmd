@@ -1,0 +1,238 @@
+---
+title: "SOK-1301 Mappeoppgave H25"
+subtitle: "Inntektsulikhet"
+author: "Mikko Moilanen"
+format: pdf
+execute:
+  eval: false
+---
+
+# Bakgrunn
+
+I denne oppgaven skal du undersøke ulikhet i inntektsfordelingen i Norge og internasjonalt ved å bruke flere datasett. Dere skal laste ned data fra [OECD](https://stats.oecd.org/index.aspx?r=994307#), [Our World in Data](https://ourworldindata.org/) og har tilgang til lokale inntektstall fra GitHub.
+
+Som en del av besvarelsen blir dere bedt om å lage "pene" figurer. Ekstern sensor på faget (Even S. Hvinden, Forsvarets forskningsinstitutt) presiserer at dette innebærer at dere følger STAV-prinsippet for gode figurer:
+
+\* **S**elvstendig: Figuren og tilhørende figurtekst inneholder all nødvendig informasjon for en entydig tolkning av innholdet. Enhetene, utvalget og transformasjoner fremkommer tydelig.
+
+\* **T**ydelig: Farger, linjestørrelse, og andre visuelle egenskaper kombinerer til å gjøre figuren lettleselige og bidrar til å fremheve egenskapen ved datasettet figuren illustrerer.
+
+\* **A**vgrenset: Figuren fremhever og illustrerer ett og kun ett poeng. Har dataene flere egenskaper vi vil vise så lager vi flere figurer.
+
+\* **V**akker: Figuren gir en utvungen og intuitiv følelse av tilfredsstillelse og mening.
+
+# Instruksjoner og oppgaver
+
+Mappeoppgaven kan besvares individuelt eller i grupper på inntil tre studentet. Grupper anbefales å undertegne en [samarbeidsavtale](https://github.com/uit-sok-1301-h25/uit-sok-1301-h25.github.io/blob/main/samarbeidsavtale_for_gruppearbeid_SOK-1301.docx). Det er tillatt å bruke kunstig intelligens til å skrive kode, og til å finpusse din tekst. Det er ikke tillatt å be KI-verktøyet om å skrive din besvarelse (jeg har sjekket hvilke type svar man får fra KI). Dersom du bruker et KI verktøy, [**må**]{.underline} du lage en KI-erklæring til din besvarelse som dokumenterer hvor i besvarelsen og hvordan du har brukt det. I forelesning 4 fikk dere noen tips om hvordan dere kan sitere KI.
+
+Bruk [Quarto](https://quarto.org/) i RStudio som plattform. Bruk følgende YAML-kode øverst i dokumentet (du kan tilpasse med evt. andre settinger).
+
+------------------------------------------------------------------------
+
+title: "SOK-1301, høst 2025, Mappeoppgave"
+
+author: "\[ditt kandidatnummer\]"
+
+format: pdf
+
+echo: false
+
+output: true
+
+editor: visual
+
+------------------------------------------------------------------------
+
+I Wiseflow skal dere levere
+
+1.  en lenke til GitHub repoet hvor din Quarto(.qmd)-fil ligger, som viser din besvarelse inkludert kode, og
+
+2.  en pdf-fil som inneholder din besvarelse med tekst og figurer (ikke kode).
+
+Påse at koden kjører og at dere kan eksportere besvarelsen til pdf.
+
+**Husk å gi Mikko tilgang til ditt repo!** Brukernavn: mikkomoilanen
+
+# Oppgave 1. Inntektsulikhet i Norden og USA 2012-2023
+
+## Introduksjon
+
+I denne oppgaven skal vi bruke data fra OECD for å undersøke ulikhet i inntektsfordelingen i de nordiske landene og USA. Vi skal bruke fire ulike mål på ulikhet: (1) Gini-koeffisienten for markedsinntekt, (2) Gini-koeffisienten for bruttoinntekt, (3) Gini-koeffisienten for disponibel inntekt og (4) P90/P10.
+
+Vi skal laste ned data fra [OECD Income distribution database (IDD)](https://data-explorer.oecd.org/vis?lc=en&df%5Bds%5D=dsDisseminateFinalDMZ&df%5Bid%5D=DSD_WISE_IDD%40DF_IDD&df%5Bag%5D=OECD.WISE.INE&dq=.A.......&pd=%2C&to%5BTIME_PERIOD%5D=false) ved hjelp av deres [API-løsning](https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html). API-spørringen lager man i IDD-lenken gitt ovenfor ved å klikke på knappen "Developer API". Her ser du "Data query SDMX flavour". Ved å velge filtre på venstre siden av IDD siden endres denne spørringen. Velger jeg for eksempel Time period 2012-2023 og trykker på "Copy code" får jeg en URL som jeg kan bruke i min spørring. Dere kan redusere størrelsen på datasettet ved å filtrere bort noen valg som er av mer metodologisk art. Velg for eksempel "Methodology: Income definition since 2012" og "Definition: Current definition" for å ta bort mange obrservasjoner. Jeg skal i tillegg velge ut de målene som jeg er interessert i Measure: Gini (disposable income), Gini (market income), Gini (gross income) og P90/P10. Velg *Norway*, *Finland*, *Sweden*, *Danmark* og *United States* under *Countries*. Så trykker dere "Copy code". Lim inn denne url-koden i koden nedenfor og husk å skrive *&format=csvfilewithlabels* i slutten av url-adressen.
+
+```{r warning=FALSE, message=FALSE}
+
+rm(list=ls()) 
+
+# laste pakken for å lese data samt tidyverse
+
+library(tidyverse)
+
+# Koden i dette eksemplet er uten P90/P10-variabelen
+url = "https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_WISE_IDD@DF_IDD,1.0/FIN+NOR+SWE+DNK+USA.A.INC_GROSS_GINI+INC_MRKT_GINI+INC_DISP_GINI..._T.METH2012.D_CUR.?dimensionAtObservation=AllDimensions&format=csvfilewithlabels"
+
+data<-read_csv(url)
+
+df <- as_tibble(data)
+```
+
+## Rydde opp i dataene
+
+Da har vi fått en tibble som vi kan bruke til analyse. Det er mulig at dere vil filtrere bort noen observasjoner og ta bort noen kolonner i tibblen som dere jobber med. Du kan også vurdere å gi bedre navn til dine variabler eller gjøre dem numeriske.
+
+## Oppgave 1a
+
+Bruk datasettet til å lage to figurer. Den første skal ha tre paneler ved siden av hverandre. Jeg anbefaler å bruke funksjonen [facets](https://r4ds.had.co.nz/data-visualisation.html#facets), se eksempelet under. I hver figur skal du tegne et kurvediagram ved hjelp av `ggplot` og `geom_line()`, med årstall på den horisontale `x`-aksen, og verdien på Gini på den vertikale `y`-aksen. Tegn inn alle tre definisjoner av Gini som du har i datasettet. Du skal ha alle fem land med i alle tre plottene. I det første panelet i figuren velger du Gini-koeffisienten for markedsinntekt, i det andre panelet tar du Gini-koeffisienten for bruttoinntekt, og i det tredje Gini-koeffisienten for disponibel inntekt. Gi hele figuren og hvert panel passende titler, og husk benevning av aksene, samt legende til figuren (plasser den gjerne under figuren (med `theme(legend.position = "bottom")`).
+
+Den andre figuren skal vise utviklingen av P90/P10 for de samme landene som i den første figuren.
+
+Gi en nøyaktig beskrivelse av figurene og definisjonene av indikatorene. Bruk figurene til å svare på følgende spørsmål:
+
+1.  Hvordan forklarer man eventuelle forskjeller mellom de tre Gini-koeffisientene?\
+2.  Hva viser Gini-målene om utviklingen av ulikhet i Norden og USA?\
+3.  Viser utviklingen av P90/P10 det samme som Gini-koeffisientene? Hvorfor/hvorfor ikke?\
+4.  Hva kan forklare forskjeller i inntektsulikhet mellom de nordiske landene og USA?\
+5.  Hvilken rolle spiller samfunnets institusjoner, for eksempel skattesystemet, for utjevning av ulikhet?\
+6.  Diskuter i hvilken grad ulikhetspolitikken har “flatet ut” forskjellene over tid.
+
+## Oppgave 1b
+
+Du skal lage en ny variabel som er differansen mellom markedsinntekts-Gini og disponibelinntekts-Gini. Deretter lag en figur som viser utviklingen av denne indikatoren for landene i datasettet. Hvordan kan denne nye variabelen tolkes som en indikator på omfordelingspolitikk? Diskuter forskjellene i denne indikatoren mellom de nordiske landene og USA.
+
+# Oppgave 2 - Er det en kobling mellom inntektsulikhet og tillit og inntektsulikhet og kriminalitet?
+
+Vi skal se på to mulige koblinger:
+
+1.  Stoler folk som bor i land med lav inntektsulikhet mer på hverandre enn de som bor i land med høy inntektsulikhet?
+
+2.  Har land med lav inntektsulikhet mindre kriminalitet enn land med store inntektsforskjeller?
+
+For å svare på disse spørsmålene skal vi bruke data fra **Our World in Data**. Vi laster ned dataene direkte fra deres dataside for [Gini-koeffisienten](https://ourworldindata.org/grapher/economic-inequality-gini-index),[tillit](https://ourworldindata.org/grapher/self-reported-trust-attitudes) og [kriminalitet](https://ourworldindata.org/grapher/homicide-rate-unodc).
+
+```{r warning=FALSE, message=FALSE}
+gini_url  <- "https://ourworldindata.org/grapher/economic-inequality-gini-index.csv"
+trust_url <- "https://ourworldindata.org/grapher/self-reported-trust-attitudes.csv"
+homi_url  <- "https://ourworldindata.org/grapher/homicide-rate-unodc.csv"
+
+gini  <- read_csv(gini_url)
+trust <- read_csv(trust_url)
+homi  <- read_csv(homi_url)
+```
+
+Noen av variabelnavnene i datasettene er veldig lange, så vi skal rydde litt. Jeg viser dette med det første datasettet:
+
+```{r warning=FALSE, message=FALSE}
+
+# Gini
+gini_clean <- gini %>%
+  rename(
+    country = Entity,
+    code    = Code,
+    year    = Year,
+    gini    = `Gini coefficient (2021 prices) - Income or consumption consolidated`
+  ) %>%
+  select(country, code, year, gini)
+
+```
+
+## Oppgave 2a
+
+1.  For å kunne analysere sammenhengene mellom inntektsulikhet og tillit og inntektsulikhet og kriminalitet må vi koble sammen datasettene. Rydd data fra de andre to tibblene (bruk koden ovenfor som eksempel). Koble deretter sammen datasettene ved å bruke `inner_join()`, for eksempel:
+
+```{r eval=FALSE}
+df <- gini_clean %>%
+  inner_join(trust_clean, by = c("country","code","year")) %>%
+  inner_join(homi_clean,  by = c("country","code","year"))
+```
+
+hvor `trust_clean` og `homi_clean` er de to andre datasett som du har ryddet.
+
+2.  Forklar nøye hva tallene i datasettet representerer, og hvordan de er målt.
+
+## Oppgave 2b
+
+Vi velger å bruke den siste observasjonen for hvert land fordi ikke alle land har data for de samme årene. Dersom vi tok med alle år, ville noen land få flere punkter i scatterplottet enn andre, og sammenligningen ville bli skjev.
+
+```{r eval=FALSE}
+df_latest <- df %>%
+  group_by(country) %>%
+  filter(year == max(year, na.rm = TRUE)) %>%
+  ungroup()
+```
+
+Lag to pene figurer. I den ene plotter du Gini-koeffisient mot tillit, og i den andre Gini-koeffisient mot kriminalitet. Merk gjerne punktene i figuren med landnavn. Her kan R-pakken [ggrepel](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html) være nyttig. Du kan også bruke pakken [ggflags](https://github.com/jimjam-slam/ggflags) via `remotes::install_github("rensa/ggflags")` om du foretrekker det. Bruk `geom_smooth(method = lm, se = FALSE)` for å se om det er en sammenheng i mellom variablene.
+
+## Oppgave 2c
+
+1.  Forklar figurene fra 2b nøye. Hva kan vi si (og ikke si) om sammenhengen mellom Gini og tillit og mellom Gini og kriminalitet. Hvordan kan dine funn forklares?
+
+2.  Hvilke faktorer på samfunnsnivå tror du kan påvirke tillit og kriminalitet uavhengig av inntektsulikhet, og hvordan kunne disse faktorene påvirke egenskapene til spredningsplottene?
+
+Finn gjerne faglitteratur for å underbygge dine påstander. Husk å referere til kildene du bruker!
+
+# Oppgave 3 - Inntektsulikhet i Troms fylke
+
+I filen fra Forelesning 6 har vi data for 2015 om alder, kjønn, bostedskommune, fødeselsår, samt økonomisk data om inntekt, skatt og formue.
+
+```{r}
+
+url <- "https://raw.githubusercontent.com/uit-sok-1301-h25/uit-sok-1301-h25.github.io/main/data/skatt_troms_2015.RDS"
+
+skatt_troms_2015 <- url %>%
+  url() %>%
+  gzcon() %>% 
+  readRDS()
+```
+
+## Oppgave 3a
+
+Lag en ny variabel som viser inntekt etter skatt, og fjern negative verdier (forklar gjerne hvorfor).
+
+## Oppgave 3b
+
+Beregn gjennomsnittet for de økonomiske variablene (inntekt, inntekt etter skatt, skatt og formue). Undersøk hvordan gjennomsnittene og medianverdiene er i forhold til bostedskommune. Forklaring av kommunenummer [kan du finne her](https://no.wikipedia.org/wiki/Norske_kommunenummer). Husk at datasettet kommer fra 2015. Tegn pene figurer som hjelper oss å visualisere dataene, og forklar hva de viser.
+
+## Oppgave 3c
+
+Bruk pakken [ineq](https://cran.r-project.org/web/packages/ineq/ineq.pdf) for å beregne Ginikoeffisienter for inntekt før og etter skatt for de ulike kommunene i Troms. Vis resultatene i en pen figur.
+
+## Oppgave 3d
+
+Tenk at Troms fylkeskommune har som mål å få til en jevn inntektsfordeling blant sine innbyggere. Hvilke tiltak kan fylkeskommunen vurdere for ulike kommuner basert på dine svar til oppgave 3b og 3c?
+
+# KI-erklæring
+
+Du skal også skrive en KI-erklæring. Den skal inneholde:
+
+-   Hvilket KI-verktøy som er brukt
+
+-   Hvilke oppgaver som ble delegert til KI
+
+-   Hvordan du har verifisert innholdet fra KI
+
+-   En ansvarserklæring fra deg som forfatter
+
+**Obligatorisk dokumentasjon**: Dersom du bruker KI-generert tekst ordrett, skal den markeres med anførselstegn. Alt KI-generert innhold må verifiseres og kildehenvises i teksten.
+
+# Bedømmelse
+
+Denne mappeoppgaven teller 40% av karakteren for dette kurset. Oppgavene 1, 2 og 3 teller likt i karaktersettingen. Formålet med oppgaven er å gi dere trening i å
+
+-   skrive godt og tydelig
+
+-   laste ned og anvende data og lage figurer
+
+-   benytte grunnleggende samfunnsøkonomiske begrep og teori
+
+-   være kreativ i å finne og skrive om en samfunnsøkonomisk problemstilling basert på data.
+
+En god besvarelse svarer konkret på oppgavene, gir tydelige definisjoner av faglige begrep, og forklarer utfyllende innholdet i figurene som dere lager. R-koden bør være godt dokumentert og oversiktlig.
+
+# Tilbakemelding underveis
+
+**Innleveringsfristen i Wiseflow: 20. oktober 2025 kl. 13.00**
+
+Dere vil få anledning til å presentere oppgaven til Mikko muntlig og få tilbakemelding. Dette er frivillig, og ikke en del av bedømmelsen. Muntlig presentasjon og tilbakemelding varer maksimum en halv time, og finner sted mandag 13. oktober, på Handelshøgskolen: 02.118, LEET klasserommet. Dere kan sette dere opp i dette på Canvas.
+
+Lykke til!

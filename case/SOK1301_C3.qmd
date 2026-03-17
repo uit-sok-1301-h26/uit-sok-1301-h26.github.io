@@ -1,0 +1,209 @@
+---
+title: "SOK-1301 H25 - Case 3"
+author: "Mikko Moilanen"
+format: html
+editor: visual
+---
+
+## Instruksjoner
+
+Denne oppgaven er laget opprinnelig av Even S. Hvinden. Den er endret og oppdatert av Derek J. Clark og Mikko Moilanen. Sistnevnte er ansvarlig for eventuelle feil og mangler.
+
+Oppgaven skal løses interaktivt i RStudio ved å legge inn egen kode og kommentarer. Det ferdige dokumentet lagres med kandidatnummeret som navn `[kandidatnummer]_SOK1301_C3.qmd` og lastes opp på deres GitHub-side. Hvis du har kandidatnummer 43, så vil filen hete `43_SOK1301_C3.qmd`. Påse at koden kjører og at dere kan eksportere besvarelsen til pdf. Lever så lenken til GitHub-repositoriumet i Canvas.
+
+## Bakgrunn
+
+Prisveksten har vært høy i Norge, og som [denne overskriften fra 2023](https://www.forskning.no/mat-ntb-okonomi/hoyeste-vekst-i-matpriser-siden-80-tallet/2210302) viser kan en del av prisveksten skyldes en historisk stor vekst i matpriser. [Denne saken fra E24](https://e24.no/norsk-oekonomi/i/Ey3vjG/prisveksten-laa-paa-36-prosent-i-september) viser at en økning i matpriser kan også bidra til at inflasjonen øker.
+
+Hvor mye har matpriser bidratt til prisveksten? I denne oppgaven skal vi benytte prisdata fra SSB til å besvare dette spørsmålet. Jeg anbefaler dere å lese [Konsumprisindeksen - en levekostnadsindeks](https://www.ssb.no/priser-og-prisindekser/artikler-og-publikasjoner/_attachment/203142?_ts=1495b28c170) av Randi Johannesen, Økonomiske analyser 5/2014.
+
+## Oppgave I: Tolk vekstbidraget
+
+### Hva er poenget med oppgaven?
+
+Oppgaven handler om å forstå hva som driver inflasjonen.Når Statistisk sentralbyrå (SSB) publiserer tall for konsumprisindeksen (KPI), oppgis både den **samlede inflasjonen** og **vekstbidraget** fra ulike hovedgrupper – for eksempel matvarer, energi, klær, transport og bolig.\
+For å forstå hva vekstbidraget betyr, må vi først se på hvordan KPI bygges opp.
+
+### Hvordan bygges konsumprisindeksen opp?
+
+Konsumprisindeksen $P_t$ er et **vektet gjennomsnitt** av prisene på mange varer og tjenester:
+
+$$
+P_t = \sum_{i=1}^{n} v_{i,t} p_{i,t}
+$$ {#eq-vektet_gjennomsnitt}
+
+-   $p_{i,t}$ er prisindeksen for varegruppe $i$ i måned $t$.\
+-   $v_{i,t}$ er vekten til varegruppen, altså hvor stor del av husholdningenes samlede forbruk som går til den gruppen.\
+-   Summen av alle vektene er $1$ slik at $\sum_{i=1}^{n} v_{i,t} = 1$. Eksempel: **Mat og alkoholfrie drikkevarer** kan ha en vekt på 0,13 (13 % av budsjettet), **transport** 0,15, **bolig, lys og brensel** 0,25, osv.
+
+Her ser vi på månedlige observasjoner på **hovedgruppenivå** ($n = 12$) fra **januar 1979 til september 2025**.
+
+### Tolvmåneders endring (inflasjon)
+
+Inflasjon måles som den prosentvise endringen i KPI over tolv måneder, altså forskjellen mellom indeksen i måned $t$ og måneden ett år tidligere ($t-12$):
+
+$$
+\Delta P_t = P_t - P_{t-12}
+$$ {#eq-inflasjon}
+
+Setter vi inn uttrykket fra @eq-vektet_gjennomsnitt, får vi:
+
+$$
+\Delta P_t = \sum_{i=1}^n v_{i,t} p_{i,t} - \sum_{i=1}^n v_{i,t-12} p_{i,t-12}
+           = \sum_{i=1}^{n} \Delta (v_{i,t} p_{i,t}).
+$$ {#eq-endring_totalindeks}
+
+@eq-endring_totalindeks sier at endringen i totalindeksen er **summen av endringene i de vektede prisene** for hver varegruppe.
+
+### Forenkling: antakelse om konstante vekter
+
+I praksis endres vektene kun én gang i året (i januar). De varierer altså lite gjennom året, og for å gjøre analysen enklere antar vi at $$
+v_{i,t} = v_{i,t-12}.
+$$ {#eq-konstante_vekter}
+
+Da kan vi skrive @eq-endring_totalindeks slik
+
+$$
+\Delta P_t = \sum_{i=1}^n v_{i,t-12} \Delta p_{i,t}.
+$$ {#eq-endring_kpi}
+
+### Fra nivåendring til prosentvis endring
+
+For å uttrykke inflasjonen i prosent, deler vi @eq-endring_kpi på begge sider på prisnivået ett år tidligere ($P_{t-12}$) og ganger med 100: $$
+100 \times \frac{\Delta P_t}{P_{t-12}} 
+= 100 \times \frac{\sum_{i=1}^{n} v_{i,t-12} \Delta p_{i,t}}{P_{t-12}}
+$$ {#eq-prosent_inflasjon}
+
+-   **Venstre side** viser **tolvmåneders inflasjon i prosent**, altså hvor mye totalindeksen har endret seg på ett år.\
+-   **Høyre side** viser at inflasjonen kan ses som en **sum av bidrag** fra hver varegruppe.
+
+Hver gruppe får et bidrag som avhenger av:
+
+1.  Hvor stor andel av budsjettet den utgjør ($v_{i,t-12}$), og
+
+2.  Hvor mye prisene på denne gruppen har økt det siste året ($\Delta p_{i,t}$).
+
+### Fokuserer på ett element – vekstbidraget
+
+Et enkelt element i summen, for en bestemt varegruppe $i$, er da: $$
+100 \times \frac{v_{i,t-12} \times \Delta p_{i,t}}{P_{t-12}}. 
+$$ {#eq-vekstbidrag}
+
+**Tolk @eq-vekstbidrag. Gi en konkret forklaring på hva tallet representerer.**
+
+# Oppgave II: Rydd i data
+
+Vi begynner med å rydde og laste inn pakker.
+
+```{r}
+rm(list=ls()) 
+library(tidyverse)
+library(lubridate)
+library(rjstat)
+library(janitor)
+library(gdata)
+library(httr) 
+```
+
+Vi bruker dataene fra [Tabell 0313: Konsumprisindeksen fra SSB](https://www.ssb.no/statbank/table/03013). Du laster dataene ned ved hjelp av API. Se [brukerveiledningen](https://www.ssb.no/api/pxwebapi/_/attachment/inline/019c05e0-35ad-4757-87a0-ba7fbf4a68e2:46a164479bc10a67eee4b472cd891f001ca19da5/Api_brukerveiledning.pdf) her.
+
+```{r}
+url <- "https://data.ssb.no/api/v0/no/table/03013/"
+
+query <- '{
+  "query": [
+    {
+      "code": "Konsumgrp",
+      "selection": {
+        "filter": "vs:CoiCop2016niva2",
+        "values": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ]
+      }
+    },
+    {
+      "code": "ContentsCode",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "KpiIndMnd",
+          "KpiVektMnd"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+}'
+
+hent_indeks.tmp <- url %>%
+  POST(body = query, encode = "json")
+
+df <-  hent_indeks.tmp %>%
+  content("text") %>%
+  fromJSONstat() %>%
+  as_tibble()
+```
+
+Følgende kode benytter kommandoen `as.yearmon` fra `zoo` til å lage en anstendig tidsserie.
+
+```{r}
+# install.packages("zoo") # kjør denne linjen hvis du ikke har pakken zoo installert
+library(zoo)
+df <- df %>%
+  mutate(dato = as.Date(as.yearmon(måned, format = "%YM%m")))
+```
+
+Nå er det deres tur til å rydde. Gi variablene formålstjenlige navn. Påse at variablene har riktig format. Fjern data fra før år 2011, slik at vi kan beregne tolvmåneders endring fra 2012. Løs oppgaven slik at du ekstraherer navnene på variablene og verdiene ved hjelp av kode.
+
+**Hint.** Bruk `as.Date()` for å filtrere på datoer.
+
+```{r}
+# løs oppgave II her
+
+
+```
+
+# Oppgave III: Beregn et vektet gjennomsnitt
+
+Vi skal nå beregne KPI som et vektet gjennomsnitt av konsumgruppene og sammenlign med totalindeksen.
+
+## Oppgave IIIa: Endre verdi på vektene
+
+Del vektene i `df` på 1000, og sjekk at de summerer seg til om lag `1` for hver måned. Hvor store avvik får du?
+
+```{r}
+# løs oppgave IIIa her
+
+
+```
+
+## Oppgave IIIb: Beregn prisindeksen fra gruppene med vekter
+
+Beregn en totalindeks hvor dere bruker vektene og verdiene på prisindeks i @eq-vektet_gjennomsnitt fra oppgave I. Hvordan kan du vite om beregningen er riktig?
+
+```{r}
+# løs opppgave IIIb her
+```
+
+# Oppgave IV: Beregn matprisens bidrag til vekst
+
+Lag en figur som illustrerer vekstbidraget (\@eq-vekstbidrag) til konsumgruppen "Matvarer og alkoholfrie drikkevarer". Gi figuren en anstendig tolkning.
+
+```{r}
+# løs oppgave IV her
+
+
+```
