@@ -29,7 +29,7 @@ C = casegjennomgang
 |15. september |  F8 | Institusjoner og organisering av økonomisk aktivitet  |[Ressursside](/ressurssider/F8.md){:target='_blank_'} |
 |17. september|**Frist**||  |Leveres i |
 |22. september|C2   | Case 2: BNP og CO2-utslipp   |  [lenke til case](case.md) |
-|23. september|F9| Teknologi, insentiver og økonomisk vekst  | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
+|24. september|F9| Teknologi, insentiver og økonomisk vekst  | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
 |6. oktober |V2|  Skriveverksted 2: Quarto   |Quartofiler lastes ned (clones) fra [GitHub](https://github.com/uit-sok-1301-h26/Skriveverksted_2.git){:target='_blank_'}|
 |. oktober|**Frist**    | Innlevering mappeoppgave        | | Leveres i [Wiseflow](https://europe.wiseflow.net/login){:target='_blank_'} innen kl 13.00  |
 |9. oktober|F10 | Lønn vs. Fritid - Forbrukerens avveininger  | [Ressursside](/ressurssider/F10.md){:target='_blank_'}   | 
