@@ -14,8 +14,8 @@ C = casegjennomgang
 MÅ REDIGERES
 
 
-|Dato <img width=100/>| Sesjon <img width=80/>   | Tema                                                              | Lærer  | Ressurser <img width=200/>  |
-|--------|----------------|----------------------------------------------------------------------|-----------|--------------------------------------|
+|Dato <img width=100/>| Sesjon <img width=80/>   | Tema                                                               | Ressurser <img width=200/>  |
+|--------|----------------|-----------------------------------------------------------------------|--------------------------------------|
 |13. august|F1   | Innledning og kursplan      | [Ressursside](/ressurssider/F1.md){:target='_blank_'} | 
 |18. august|F2  | RStudio intro | [Ressursside](/ressurssider/F2.md){:target='_blank_'} |
 |20. august|F3   | tidyverse, ggplot2       | [Ressursside](/ressurssider/F3.md){:target='_blank_'}  |
@@ -39,7 +39,7 @@ MÅ REDIGERES
 |22. oktober |F11  | Arbeidsinnsats og inntekt          | [Ressursside](/ressurssider/F11.md){:target='_blank_'}   |
 |27. oktober |C5    | Case 5: Produktivitet  | [lenke til case](case.md) |
 |29. oktober| S3  | Seminar 3: Gjennomgang case 3, 4 og 5  |  |
-|uke |**Mutlig eksamen** |  |   |  |
+|uke |**Muntlig eksamen** |  |   |  |
 |11. desember |**Skoleeksamen**  |        |         | |
 
 
