@@ -19,7 +19,7 @@ C = casegjennomgang
 |13. august|F1   | Innledning og kursplan      | [Ressursside](/ressurssider/F1.md){:target='_blank_'} | 
 |18. august|F2  | RStudio intro | [Ressursside](/ressurssider/F2.md){:target='_blank_'} |
 |20. august|F3   | tidyverse, ggplot2       | [Ressursside](/ressurssider/F3.md){:target='_blank_'}  |
-|27. august|F4    | Reproduserbarhet, Git, Quarto og KI | [Ressursside](/ressurssider/F4.md){:target='_blank_'} |
+|27. august|F4    | Reproduserbarhet, Quarto og KI | [Ressursside](/ressurssider/F4.md){:target='_blank_'} |
 |28.august |**Frist**| Arbeidskrav 0 - iKomp|  | Leveres i [Canvas](https://uit.instructure.com/courses/39449/assignments){:target='_blank_'} innen kl 16.00|
 |28. august|V1   | Skriveverksted 1: Innføring      | [Notater](/forelesninger/SOK-1301_Skriveverksted_1_beamer.pdf){:target='_blank_'} <br> [Praktisk oppgave - Even S. Hvinden](/forelesninger/SOK-1301_Skriveverksted_1_oppgaver.pdf){:target='_blank_'} |
 |3. september|F5   | Bruttonasjonalprodukt og økonomisk aktivitet     | [Ressursside](ressurssider/F5.md){:target='_blank_'}  |
