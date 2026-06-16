@@ -11,10 +11,10 @@ C = casegjennomgang
 [Lenke til github](https://github.com/uit-sok-1301-h26){:target='_blank_'}  
 
      
-MÅ REDIGERES
 
 
-|Dato <img width=100/>| Sesjon <img width=80/>   | Tema                                                               | Ressurser <img width=200/>  |
+
+|Dato <img width=100/>| Sesjon <img width=80/>   | Tema   | Ressurser <img width=200/>  |
 |--------|----------------|-----------------------------------------------------------------------|--------------------------------------|
 |13. august|F1   | Innledning og kursplan      | [Ressursside](/ressurssider/F1.md){:target='_blank_'} | 
 |18. august|F2  | RStudio intro | [Ressursside](/ressurssider/F2.md){:target='_blank_'} |
