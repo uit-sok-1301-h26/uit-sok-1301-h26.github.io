@@ -8,7 +8,7 @@ S = seminar
 C = casegjennomgang               
       
 
-[Lenke til github](https://github.com/uit-sok-1301-h26){:target='_blank_'}  
+[Lenke til kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  
 
      
 
