@@ -16,7 +16,7 @@ Kurset tas normalt i første høstsemester, og teller 15 studiepoeng.
 ## Faglærerinfo  
 
 - [Derek J. Clark](https://uit.no/ansatte/derek.clark){:target="blank"} (fagansvarlig) - GitHub brukernavn: derekjclark
-- Studentlærere [Andrea Bergum Karlsen](mailto:ankar3982@uit.no), [Marius Edvart Aamodt](mailto:maam0524@uit.no)
+- Studentlærere [Andrea Bergum Karlsen](mailto:ankar3982@uit.no), [Marius Edvart Aamodt](mailto:maaam0524@uit.no)
 
    
 
