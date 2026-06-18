@@ -39,8 +39,8 @@ C = casegjennomgang
 |22. oktober |F11  | Arbeidsinnsats og inntekt          | [Ressursside](/ressurssider/F11.md){:target='_blank_'}   |
 |27. oktober |C5    | Case 5: Produktivitet  | [lenke til case](case.md) |
 |29. oktober| S3  | Seminar 3: Gjennomgang case 3, 4 og 5  |  |
-|uke 46/47 |**Muntlig eksamen** |  |   |  |
-|11. desember |**Skoleeksamen**  |        |         | |
+|**uke 46/47** |**Muntlig eksamen** |  |   |  |
+|**11. desember 09.00-12.00** |**Skoleeksamen**  |**Sted: Aud Max**        |         | |
 
 
 
