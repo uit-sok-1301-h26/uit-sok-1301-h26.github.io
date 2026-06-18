@@ -28,18 +28,18 @@ C = case
 |17. september |  F8 | Institusjoner og organisering av økonomisk aktivitet  |[Ressursside](/ressurssider/F8.md){:target='_blank_'} |
 |22. september|C2   | Data visualisering   |  [lenke til case](case.md) |
 |24. september|*Utdeling*|Arbeidskrav 2|[Arbeidskrav 2](){:target='_blank_'}|
-|25. september|**Frist**|Arbeidskrav 1|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
+|25. september|**Frist**|Innlevering: Arbeidskrav 1|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |6. oktober|F9| Teknologi, insentiver og økonomisk vekst  | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
-|8. oktober|**Frist**|Arbeidskrav 2|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
+|8. oktober|**Frist**|Innlevering: Arbeidskrav 2|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |9. oktober|*Utdeling*|Arbeidskrav 3|[Arbeidskrav 3](){:target='_blank_'}|
 |13. oktober|F10 | Lønn vs. Fritid - Forbrukerens avveininger  | [Ressursside](/ressurssider/F10.md){:target='_blank_'}   | 
 |15. oktober |F11  | Arbeidsinnsats og inntekt          | [Ressursside](/ressurssider/F11.md){:target='_blank_'}   |
 |20. oktober|*Utdeling*|Arbeidskrav 4|[Arbeidskrav 4](){:target='_blank_'}|
 |22. oktober| |Ledig time| |
-|23. oktober|**Frist**|Arbeidskrav 3|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
+|23. oktober|**Frist**|Innlevering: Arbeidskrav 3|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |27. oktober| |Ledig time| |
 |29. oktober| |Ledig time| |
-|6. november|**Frist**|Arbeidskrav 4|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
+|6. november|**Frist**|Innlevering: Arbeidskrav 4|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |**uke 47/48** |**Muntlig eksamen** |    |
 |**11. desember 09.00-12.00** |**Skoleeksamen**  |**Sted: Aud Max**        |         | 
 
