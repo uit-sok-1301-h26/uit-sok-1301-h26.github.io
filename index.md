@@ -49,7 +49,7 @@ Kunngjøringer og beskjeder legges ut i [Canvas](https://uit.instructure.com/cou
 
 Du må bestå 4 obligatoriske skriftlige oppgaver - alle skrives individuelt. To av disse trekkes tilfeldig og danner grunnlag for en muntlig eksamen (30 minutter). Du må også ta en skriftlig skoleeksamen på 3 timer. Samlet karakter (A-F) beregnes med 60% vekt på muntlig del og 40% på den skriftlige delen. 
 
-**Muntlig eksamen i uke 46 og 47**
+**Muntlig eksamen i uke 47 og 48**
 
 **Skriftlig skoleeksamen fredag 11. desember kl 09.00-12.00 på Auditorium Maximum**
 
