@@ -21,12 +21,12 @@ C = case
 |28. august |**Frist**| Arbeidskrav 0 - iKomp|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |28. august|Skriveverksted   | Akademisk skriving <br> Bruk av Quarto      | [Last ned alle filer her](https://github.com/uit-sok-1301-h26/skriveverksted){:target='_blank_'} |
 |3. september|F5   | Bruttonasjonalprodukt og økonomisk aktivitet     | [Ressursside](ressurssider/F5.md){:target='_blank_'}  |
-|4. september|C1 | SSBs API <br> Data transformasjon    | [lenke til case](case.md){:target='_blank_'} |
+|4. september|C1 | Tema: BNP <br> Kode: SSBs API <br> Kode: Datatransformasjon    | [kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  |
 |8. september| F6     | Økonomisk ulikhet   | [Ressursside](/ressurssider/F6.md){:target='_blank_'}   | 
 |10. september|*Utdeling*|Arbeidskrav 1|[Arbeidskrav 1](){:target='_blank_'}|
 |15. september|F7    | Vekst og teknologisk fremgang            | [Ressursside](/ressurssider/F7.md){:target='_blank_'}   |
 |17. september |  F8 | Institusjoner og organisering av økonomisk aktivitet  |[Ressursside](/ressurssider/F8.md){:target='_blank_'} |
-|22. september|C2   | Data visualisering   |  [lenke til case](case.md) |
+|22. september|C2   | Tema: BNP og miljø <br> Kode: Datavisualisering   |  [kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  |
 |24. september|*Utdeling*|Arbeidskrav 2|[Arbeidskrav 2](){:target='_blank_'}|
 |25. september|**Frist**|Innlevering: Arbeidskrav 1|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |6. oktober|F9| Teknologi, insentiver og økonomisk vekst  | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
