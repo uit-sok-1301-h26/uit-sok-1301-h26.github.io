@@ -7,6 +7,7 @@ C = case
       
 
 [Lenke til kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  
+[Lenke til løsninger](https://github.com/uit-sok-1301-h26/losninger){:target='_blank_'}  
 
      
 
