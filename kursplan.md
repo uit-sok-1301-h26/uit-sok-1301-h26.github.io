@@ -24,18 +24,18 @@ C = case
 |3. september|F5   | Bruttonasjonalprodukt og økonomisk aktivitet     | [Ressursside](ressurssider/F5.md){:target='_blank_'}  |
 |4. september|C1 | Tema: BNP <br> Kode: SSBs API <br> Kode: Datatransformasjon    | [kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  |
 |8. september| F6     | Økonomisk ulikhet   | [Ressursside](/ressurssider/F6.md){:target='_blank_'}   | 
-|10. september|*Utdeling*|Arbeidskrav 1|[Arbeidskrav 1](){:target='_blank_'}|
+|10. september|*Utdeling*|Arbeidskrav 1|[Arbeidskrav 1](https://uit.instructure.com/courses/42752/assignments/152550){:target='_blank_'}|
 |15. september|F7    | Vekst og teknologisk fremgang            | [Ressursside](/ressurssider/F7.md){:target='_blank_'}   |
 |17. september |  F8 | Institusjoner og organisering av økonomisk aktivitet  |[Ressursside](/ressurssider/F8.md){:target='_blank_'} |
-|22. september|C2   | Tema: BNP og miljø <br> Kode: Datavisualisering   |  [kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  |
-|24. september|*Utdeling*|Arbeidskrav 2|[Arbeidskrav 2](){:target='_blank_'}|
+|22. september|F9| Teknologi, insentiver og økonomisk vekst  | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
+|24. september|*Utdeling*|Arbeidskrav 2|[Arbeidskrav 2](https://uit.instructure.com/courses/42752/assignments/152551){:target='_blank_'}|
 |25. september|**Frist**|Innlevering: Arbeidskrav 1|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
-|6. oktober|F9| Teknologi, insentiver og økonomisk vekst  | [Ressursside](/ressurssider/F9.md){:target='_blank_'}   |
+|6. oktober|C2   | Tema: BNP og miljø <br> Kode: Datavisualisering   |  [kursets nedlastingsside](https://github.com/uit-sok-1301-h26/filer){:target='_blank_'}  |
 |8. oktober|**Frist**|Innlevering: Arbeidskrav 2|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
-|9. oktober|*Utdeling*|Arbeidskrav 3|[Arbeidskrav 3](){:target='_blank_'}|
+|9. oktober|*Utdeling*|Arbeidskrav 3|[Arbeidskrav 3](https://uit.instructure.com/courses/42752/assignments/152552){:target='_blank_'}|
 |13. oktober|F10 | Lønn vs. Fritid - Forbrukerens avveininger  | [Ressursside](/ressurssider/F10.md){:target='_blank_'}   | 
 |15. oktober |F11  | Arbeidsinnsats og inntekt          | [Ressursside](/ressurssider/F11.md){:target='_blank_'}   |
-|20. oktober|*Utdeling*|Arbeidskrav 4|[Arbeidskrav 4](){:target='_blank_'}|
+|20. oktober|*Utdeling*|Arbeidskrav 4|[Arbeidskrav 4](https://uit.instructure.com/courses/42752/assignments/152553){:target='_blank_'}|
 |22. oktober| |Ledig time| |
 |23. oktober|**Frist**|Innlevering: Arbeidskrav 3|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |27. oktober| |Ledig time| |
