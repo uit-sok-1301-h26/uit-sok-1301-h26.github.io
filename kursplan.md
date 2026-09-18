@@ -41,7 +41,7 @@ C = case
 |27. oktober| |Ledig time| |
 |29. oktober| |Ledig time| |
 |6. november|**Frist**|Innlevering: Arbeidskrav 4|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
-|**uke 47/48** |**Muntlig eksamen** |    |
+|**23.-25.11.26** |**Muntlig eksamen** |    |
 |**11. desember 09.00-12.00** |**Skoleeksamen**  |**Sted: Aud Max**        |         | 
 
 
