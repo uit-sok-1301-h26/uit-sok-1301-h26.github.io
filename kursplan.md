@@ -36,7 +36,7 @@ C = case
 |13. oktober|F10 | Lønn vs. Fritid - Forbrukerens avveininger  | [Ressursside](/ressurssider/F10.md){:target='_blank_'}   | 
 |15. oktober |F11  | Arbeidsinnsats og inntekt          | [Ressursside](/ressurssider/F11.md){:target='_blank_'}   |
 |20. oktober|*Utdeling*|Arbeidskrav 4|[Arbeidskrav 4](https://uit.instructure.com/courses/42752/assignments/152553){:target='_blank_'}|
-|22. oktober| |Informasjon om skoleeksamenen| |
+|22. oktober| |Eksamensinformasjon  | |
 |23. oktober|**Frist**|Innlevering: Arbeidskrav 3|  Leveres i [Canvas](https://uit.instructure.com/courses/42752/assignments){:target='_blank_'} innen kl 16.00|
 |27. oktober| |Ledig time| |
 |29. oktober| |Ledig time| |
